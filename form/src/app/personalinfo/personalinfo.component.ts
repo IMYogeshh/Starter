@@ -8,6 +8,8 @@ import { NgForm } from '@angular/forms';
 export class PersonalinfoComponent implements OnInit {
   model: any = {}
   country: any = ['America', 'India', 'England']
+
+  titleSt = ['MR.', 'MRS.', 'MISS.']
   ngOnInit() {
   }
   mySub(frm: NgForm) {

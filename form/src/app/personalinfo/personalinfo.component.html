@@ -9,18 +9,22 @@
                   <div class="col-12">
                     <div class="radioGrp">
                       <div class="form-check">
-                        <input type="radio"  value="mr" id="mr" name="titleSt" required ngModel #fName="ngModel">
+                        <input type="radio"  value="mr" id="mr" name="titleSt" [(ngModel)]="model.titleSt" #titleSt="ngModel" [ngClass]="{ 'is-invalid': myForm.submitted && titleSt.invalid }" required>
                         <label class="form-check-label" for="mr">MR.</label>
                       </div>
                       <div class="form-check">
-                        <input type="radio"  value="mrs" id="mrs" name="titleSt" required ngModel #fName="ngModel">
+                        <input type="radio"  value="mrs" id="mrs" name="titleSt" [(ngModel)]="model.titleSt" #titleSt="ngModel" [ngClass]="{ 'is-invalid': myForm.submitted && titleSt.invalid }" required>
                         <label class="form-check-label" for="mrs">MRS.</label>
                       </div>
                       <div class="form-check">
-                        <input type="radio"  value="miss" id="miss" name="titleSt" required ngModel #fName="ngModel">
+                        <input type="radio"  value="miss" id="miss"name="titleSt" [(ngModel)]="model.titleSt" #titleSt="ngModel" [ngClass]="{ 'is-invalid': myForm.submitted && titleSt.invalid }" required>  
                         <label class="form-check-label" for="miss">Miss.</label>
                       </div>
                     </div>
+                    <div *ngIf="myForm.submitted && titleSt.invalid" class="error">
+                      <div *ngIf="titleSt.errors.required">Title is required</div>
+                  </div>
+                  <p class="error" *ngIf="titleSt.touched && !titleSt.valid">Enter your name</p>
                     </div>
               </div>
 
