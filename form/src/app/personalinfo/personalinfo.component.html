@@ -109,10 +109,22 @@
                     <div *ngIf="maStat.errors.required">Marital Status is required</div>
                 </div>
                 <p class="error" *ngIf="maStat.touched && !maStat.valid">Enter your name</p>
+
+                <div class="form-group d-none mt-4">
+                  <label for="fName">Spouse name</label>
+                  <input type="text" name="spName" class="form-control" [(ngModel)]="model.spName" #spName="ngModel" [ngClass]="{ 'is-invalid': myForm.submitted && spName.invalid }" required>
+                  <div *ngIf="myForm.submitted && spName.invalid" class="error">
+                      <div *ngIf="spName.errors.required">First Name is required</div>
+                  </div>
+                  <p class="error" *ngIf="spName.touched && !spName.valid">Enter your name</p>
+                </div>
+
                 <div class="form-group text-right mt-4">
                   <input type="submit" class="btn btn-primary" value="Next">
                 </div>
                 </div>
+
+
               </div>
 
 

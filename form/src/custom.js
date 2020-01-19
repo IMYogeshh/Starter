@@ -7,4 +7,9 @@ $(document).ready(function(){
         $('.form-check-2 input:not(:checked)').parent().removeClass("bgClr");
         $('.form-check-2 input:checked').parent().addClass("bgClr");
     });
+
+    $("#married").click(function (){
+        alert(1);
+        $(".form-group").removeClass("d-none");
+    })
 });
