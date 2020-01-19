@@ -1,0 +1,47 @@
+.formUi {
+    background: #f5f5dc;
+    margin-top: 50px;
+    padding: 20px 30px;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    .radioGrp {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        display: flex;
+        .form-check {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+            border-right: 1px solid #ccc;
+            &:last-child {
+                border: 0;
+            }
+            .form-check-input {
+                margin-left: 0;
+            }
+            .form-check-label {
+                margin-left: 20px;
+            }
+        }
+    }
+    .btn-primary {
+        background: #a80f23;
+        border: 1px solid #a80f23;
+    }
+    .error {
+        color: #ff0000;
+    }
+}
+
+#datepicker{width:180px; margin: 0 20px 20px 20px;}
+#datepicker > span:hover{cursor: pointer;}
