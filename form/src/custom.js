@@ -9,7 +9,6 @@ $(document).ready(function(){
     });
 
     $("#married").click(function (){
-        alert(1);
         $(".form-group").removeClass("d-none");
     })
 });
