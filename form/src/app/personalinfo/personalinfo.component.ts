@@ -10,6 +10,8 @@ export class PersonalinfoComponent implements OnInit {
   country: any = ['America', 'India', 'England']
 
   titleSt = ['MR.', 'MRS.', 'MISS.']
+
+  
   ngOnInit() {
   }
   mySub(frm: NgForm) {
